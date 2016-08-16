@@ -13,6 +13,15 @@
   (println)
  )
 
+;Exponentiation fn with SO Error
+(defn exp [x n]
+  (if (zero? n) 1
+    (* x (exp x (dec n)))))
+
+;Exponentiation fn without SO Error
+(defn expt [x n]
+  (reduce * (repeat n x)))
+
 (defn -main[& args]
   "Command-line entry point."
   []
